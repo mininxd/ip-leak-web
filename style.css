@@ -15,8 +15,7 @@ span.button {
   border: 0 !important;
 }
 div.card {
-  border: gray solid 1px;
-  max-width: 400px;
+  max-width: 475px;
 }
 nav.navbar {
   box-shadow: 1px 5px #fff;
@@ -29,6 +28,9 @@ div.foot {
 img.brand {
   max-height: 40px;
   margin: 10px;
+}
+iframe.maps {
+  border-radius: 10px;
 }
 md-block {
   margin: 5px;
