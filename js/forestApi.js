@@ -18,7 +18,7 @@ fetch(ipJson)
 }).then(res => {return res.json();
 }).then(dataAsn => {
   //data ASN
-  // consolee.log(dataAsn);
+  // console.log(dataAsn);
   $('.asnNumEl').html(dataAsn.asn.number);
   $('.asnRegEl').html(dataAsn.asn.registry);
   $('.asnNameEl').html(dataAsn.asn.name);
@@ -29,7 +29,7 @@ var cidrArr = 0;
 var cidrLength = dataAsn.asn.cidr.length;
 cidrListEl.innerHTML = "";
 for(cidrLength; cidrArr < cidrLength; cidrArr++ ) {
-  // consolee.log(cidrArr);
+  // console.log(cidrArr);
   cidrListEl.innerHTML += "<li>"+dataAsn.asn.cidr[cidrArr] + "</li>";
 }
 
@@ -37,7 +37,7 @@ var entitiesArr = 0;
 var entitiesLength = dataAsn.asn.entities.length;
 entitiesEl.innerHTML = "";
 for(entitiesLength; entitiesArr < entitiesLength; entitiesArr++ ) {
-  // consolee.log(entitiesArr);
+  // console.log(entitiesArr);
   entitiesEl.innerHTML += "<li>"+dataAsn.asn.entities[entitiesArr] + "</li>";
 }
 
@@ -56,7 +56,7 @@ return fetch(ipJson)
 }).then(res => {return res.json();
 }).then(dataSub => {
 // data Subnet
-  // consolee.log(dataSub);
+  // console.log(dataSub);
   $(".subnetEl").html(dataSub.subnet);
   
   
@@ -75,7 +75,7 @@ return fetch(ipJson)
 }).then(res => {return res.json();
 }).then(dataGeo => {
 // data Geolocation
-  // consolee.log(dataGeo);
+ //  console.log(dataGeo);
   $(".navbar").removeClass("is-invisible");
   $(".ispEl").html(dataGeo.geolocation.isp);
   $(".countryEl").html(dataGeo.geolocation.country);
@@ -83,6 +83,12 @@ return fetch(ipJson)
   $(".regionEl").html(dataGeo.geolocation.regionName +" - ");
   $(".cityEl").html(dataGeo.geolocation.city);
     $('.timezoneEl').html(dataGeo.geolocation.timezone);
+    $('.latitudeEl').html("lat : " + dataGeo.geolocation.lat + ", ");
+    $('.longitudeEl').html("lon : " + dataGeo.geolocation.lon);
+    
+    $(".mapsEl").html(
+      "<iframe class='maps' src='https://maps.google.com/maps?q=" + dataGeo.geolocation.lat + "," + dataGeo.geolocation.lon + "&hl=es;z=14&amp;output=embed' width='320' height='200' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade' </iframe>"
+      )
     
     if(dataGeo.geolocation.mobile == false) {
     $('.isMobileEl').html("false");
@@ -108,7 +114,7 @@ return fetch(ipJson)
 }).then(res => {return res.json();
 }).then(dataRev => {
 // data Reverse
-  // consolee.log(dataRev);
+  // console.log(dataRev);
   if(dataRev.status == false) {
   $(".reverseEl").html(dataRev.message);
 } else {
@@ -117,5 +123,5 @@ return fetch(ipJson)
   
   
 
-}).catch(e => { /*consolee.log(e)*/});
+}).catch(e => { /*console.log(e)*/});
 }

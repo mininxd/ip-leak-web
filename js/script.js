@@ -1,9 +1,10 @@
 import {fetchData} from "./forestApi.js";
 import {getLocalIP} from './localIp.js';
+
 getLocalIP().then((ipAddr) => {
-  console.log(ipAddr);
+ // console.log(ipAddr);
   $('.localIpEl').html(ipAddr);
- });
+ }).catch(e =>  $('.localIpEl').html(e))
  fetchData();
 
 
