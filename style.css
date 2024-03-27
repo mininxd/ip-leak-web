@@ -1,0 +1,42 @@
+html {
+  transition: 0.5s linear;
+  }
+div.container {
+  padding: 10px;
+  display: grid;
+  justify-content: center;
+}
+div.localIpWrapper {
+  width: 100%;
+  padding: 20px;
+  border-radius: 20px;
+}
+span.button {
+  border: 0 !important;
+}
+div.card {
+  border: gray solid 1px;
+  max-width: 400px;
+}
+nav.navbar {
+  box-shadow: 1px 5px #fff;
+}
+div.foot {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+}
+img.brand {
+  max-height: 40px;
+  margin: 10px;
+}
+md-block {
+  margin: 5px;
+}
+
+
+
+.tag:hover {
+  color: hsl(0,0%,21%);
+  background: hsl(171, 100%, 96%);
+}

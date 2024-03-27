@@ -1,0 +1,187 @@
+<html class="has-navbar-fixed-bottom">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="module" src="./js/script.js"></script>
+<script type="module" src="https://md-block.verou.me/md-block.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+<title>IP Leak and Info</title>
+</head>
+<body>
+  <div class="container">
+    <h1 class="subtitle is-3">IP Leak and Info</h1>
+    <div class="wrapper block">
+    
+      <div class="card">
+        
+    <div class="localIpWrapper">
+    <center>
+      <span class="tag is-primary is-light">local IP</span>
+      <h1 class="localIpEl title is-2"></h1>
+    </center>
+    </div>
+    
+  <div class="card-content">
+    <div class="media">
+      <div class="media-content">
+      </div>
+    </div>
+
+    <div class="content">
+      <span class="tag">Public IP and Subnet</span>
+      <br>
+      <span class="ipAddrEl title is-2 is-center">
+      </span>
+      <br>
+      <span class="subnetEl subtitle is-3">
+       <span class="button is-disabled is-loading"></span>
+      </span>
+      <br><br>
+      
+     <span class="tag">Autonomous System (ANS)</span><br>
+      <span class="asnNameEl title is-4">   <span class="button is-disabled is-loading"></span>
+      </span>
+      <br>
+      <span class="asnDescEl subtitle is-5">    </span>
+      <br>
+      <span class="asnNumEl subtitle is-6">
+      </span>
+      <br>
+      <span class="asnRegEl subtitle is-6">
+      </span>
+<br><br>
+<span class="tag">Classless inter Domain Routing (CIDR)</span>
+<div id="cidrListEl">
+      <span class="button is-disabled is-loading"></span>
+</div>
+<br>
+<span class="tag">Entities</span>
+<div id="entitiesEl">
+      <span class="button is-disabled is-loading"></span>
+</div>
+<br>
+<span class="tag">Reverse DNS</span>
+<br>
+<span class="is-6 subtitle reverseEl">
+      <span class="button is-disabled is-loading"></span>
+</span>
+</div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+      <div class="card">
+  <div class="card-content">
+    <div class="media">
+      <div class="media-content">
+        <p class="subtitle is-4">Geolocation</p>
+      </div>
+    </div>
+    <div class="content">
+
+<span class="tag">Country</span>
+<br>
+<span class="title is-2 countryEl"> 
+<span class="button is-disabled is-loading"></span>
+</span>
+<span class="subtitle is-3 countryIdEl"></span><br>
+<span class="subtitle is-5 regionEl"></span>
+<span class="subtitle is-5 cityEl"></span><br>
+<span class="subtitle is-6 timezoneEl"></span>
+ <br><br>
+ <span class="tag">Internet Service Provider (ISP)</span><br>
+<span class="title is-4 ispEl">
+  <span class="button is-disabled is-loading"></span>
+</span>
+<br><br>
+ <span class="tag">is mobile data?</span><br>
+<span class="subtitle is-4 isMobileEl">
+  <span class="button is-disabled is-loading"></span>
+</span>
+ 
+  </div>
+ </div>
+</div>
+
+
+
+
+
+     <div class="card">
+  <div class="card-content">
+    <div class="media">
+      <div class="media-content">
+        <p class="subtitle is-4">Device Info</p>
+      </div>
+    </div>
+    <div class="content">
+
+<span class="tag">device vendor</span>
+<br>
+<span class="title is-3 browserNameEl"> 
+</span><br>
+<span class="subtitle is-5 platformEl"></span>
+<br><br>
+<span class="tag">max touchpoint</span>
+<br>
+<span class="title is-3 touchscreenEl">
+</span><br>
+<br>
+<span class="tag">User Agent</span>
+<br>
+<span class="subtitle is-6 userAgentEl"></span>
+
+ 
+  </div>
+ </div>
+</div>
+    
+    
+    
+    <!--End of wrapper"--->
+  </div>
+ </div>
+ 
+
+<div class="container is-fluid">
+  <div class="foot">
+    <a href="https://bulma.io">
+    <img src="https://bulma.io/assets/brand/Bulma%20Icon.svg" class="brand">
+    </a>
+    <a href="https://www.forestapi.my.id">
+    <img src="https://www.forestapi.my.id/static/images/forestapi.png" class="brand">
+    </a>
+  </div>
+  <br>
+  <center>
+    <div class="is-flex">
+      <md-block>
+          [![Donate -
+          Saweria](https://img.shields.io/badge/Donate-Saweria-ff940b?style=for-the-badge)](https://saweria.co/mininxd)
+        </md-block> &nbsp; &nbsp;
+          <md-block>
+          [![Donate -
+          Saweria](https://img.shields.io/badge/Source-Github-2a2a2a?style=for-the-badge)](https://github.com/mininxd/ip-leak-web)
+        </md-block>
+        </div>
+    <span class="is-size-7">mininxd 2024 - Present.</span>
+  </center>
+</div>
+</body>
+
+ <nav class="navbar is-invisible is-fixed-bottom">
+   <div class="container">
+     <p class="subtitle is-6"><span class="ipAddrEl"></span> - <span class="ispEl"></span></p>
+   </div>
+ </nav>
+</html>
