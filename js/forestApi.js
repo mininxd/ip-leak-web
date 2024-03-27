@@ -18,7 +18,7 @@ fetch(ipJson)
 }).then(res => {return res.json();
 }).then(dataAsn => {
   //data ASN
-  console.log(dataAsn);
+  // consolee.log(dataAsn);
   $('.asnNumEl').html(dataAsn.asn.number);
   $('.asnRegEl').html(dataAsn.asn.registry);
   $('.asnNameEl').html(dataAsn.asn.name);
@@ -29,7 +29,7 @@ var cidrArr = 0;
 var cidrLength = dataAsn.asn.cidr.length;
 cidrListEl.innerHTML = "";
 for(cidrLength; cidrArr < cidrLength; cidrArr++ ) {
-  console.log(cidrArr);
+  // consolee.log(cidrArr);
   cidrListEl.innerHTML += "<li>"+dataAsn.asn.cidr[cidrArr] + "</li>";
 }
 
@@ -37,7 +37,7 @@ var entitiesArr = 0;
 var entitiesLength = dataAsn.asn.entities.length;
 entitiesEl.innerHTML = "";
 for(entitiesLength; entitiesArr < entitiesLength; entitiesArr++ ) {
-  console.log(entitiesArr);
+  // consolee.log(entitiesArr);
   entitiesEl.innerHTML += "<li>"+dataAsn.asn.entities[entitiesArr] + "</li>";
 }
 
@@ -56,7 +56,7 @@ return fetch(ipJson)
 }).then(res => {return res.json();
 }).then(dataSub => {
 // data Subnet
-  console.log(dataSub);
+  // consolee.log(dataSub);
   $(".subnetEl").html(dataSub.subnet);
   
   
@@ -75,7 +75,7 @@ return fetch(ipJson)
 }).then(res => {return res.json();
 }).then(dataGeo => {
 // data Geolocation
-  console.log(dataGeo);
+  // consolee.log(dataGeo);
   $(".navbar").removeClass("is-invisible");
   $(".ispEl").html(dataGeo.geolocation.isp);
   $(".countryEl").html(dataGeo.geolocation.country);
@@ -108,7 +108,7 @@ return fetch(ipJson)
 }).then(res => {return res.json();
 }).then(dataRev => {
 // data Reverse
-  console.log(dataRev);
+  // consolee.log(dataRev);
   if(dataRev.status == false) {
   $(".reverseEl").html(dataRev.message);
 } else {
@@ -117,5 +117,5 @@ return fetch(ipJson)
   
   
 
-}).catch(e => {console.log(e)});
+}).catch(e => { /*consolee.log(e)*/});
 }

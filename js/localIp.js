@@ -10,7 +10,7 @@
 export function getLocalIP() {
   return new Promise(function(resolve, reject) {
     // NOTE: window.RTCPeerConnection is "not a constructor" in FF22/23
-    var RTCPeerConnection = window.RTCPeerConnection | window.webkitRTCPeerConnection || window.mozRTCPeerConnection;
+    var RTCPeerConnection = /* window.RTCPeerConnection || */ window.webkitRTCPeerConnection || window.mozRTCPeerConnection;
 
     if (!RTCPeerConnection) {
       reject('Your browser does not support this API');

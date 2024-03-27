@@ -7,9 +7,7 @@ getLocalIP().then((ipAddr) => {
  fetchData();
 
 
-console.log(navigator);
-console.log(navigator.deviceMemory);
-
+// console.log(navigator);
 
 $('.browserNameEl').html(navigator.vendor);
 $('.platformEl').html(navigator.platform);
