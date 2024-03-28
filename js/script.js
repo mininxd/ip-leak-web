@@ -8,9 +8,11 @@ getLocalIP().then((ipAddr) => {
  fetchData();
 
 
+/*
 // console.log(navigator);
 
 $('.browserNameEl').html(navigator.vendor);
 $('.platformEl').html(navigator.platform);
 $('.touchscreenEl').html(navigator.maxTouchPoints);
 $('.userAgentEl').html(navigator.userAgent);
+*/
